@@ -10,11 +10,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool isEmpty = false;
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
     bool isAppBar = true;
-    bool isEmpty = true;
     return Scaffold(
       // drawer: SideDrawer(),
       primary: true,
@@ -36,8 +36,12 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(left: 40.0, top: 5),
                 child: TextField(
                     onChanged: (value) {
-                      print(value);
+                      setState(() {
+                        // value == null ? isEmpty = true : isEmpty = false;
+                        value != null ? isEmpty = true : isEmpty = false;
+                      });
                     },
+                    style: TextStyle(color: Colors.white),
                     cursorColor: Colors.white38,
                     decoration: new InputDecoration(
                         border: InputBorder.none,
