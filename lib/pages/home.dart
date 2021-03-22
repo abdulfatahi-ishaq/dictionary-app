@@ -11,10 +11,10 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
-  bool isAppBar = true;
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
-
+    bool isAppBar = true;
+    bool isEmpty = true;
     return Scaffold(
       // drawer: SideDrawer(),
       primary: true,
@@ -35,6 +35,9 @@ class _HomePageState extends State<HomePage> {
               flexibleSpace: Padding(
                 padding: const EdgeInsets.only(left: 40.0, top: 5),
                 child: TextField(
+                    onChanged: (value) {
+                      print(value);
+                    },
                     cursorColor: Colors.white38,
                     decoration: new InputDecoration(
                         border: InputBorder.none,
@@ -47,12 +50,15 @@ class _HomePageState extends State<HomePage> {
                         hintStyle: TextStyle(color: Colors.white38))),
               ),
               actions: [
-                IconButton(
-                  icon: Icon(
-                    Icons.close,
-                    color: Colors.white,
+                Visibility(
+                  visible: isEmpty,
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.close,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {},
                   ),
-                  onPressed: () {},
                 ),
               ],
             )
