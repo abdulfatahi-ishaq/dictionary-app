@@ -26,20 +26,34 @@ class _HomePageState extends State<HomePage> {
                   Icons.arrow_back,
                   color: Colors.white,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    isAppBar = false;
+                  });
+                },
               ),
-              actions: <Widget>[
-                TextField(
-                  cursorColor: Colors.grey,
-                  decoration: new InputDecoration(
-                      border: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                      errorBorder: InputBorder.none,
-                      disabledBorder: InputBorder.none,
-                      contentPadding: EdgeInsets.only(
-                          left: 15, bottom: 11, top: 11, right: 15),
-                      hintText: ("Enter the word to search for")),
-                )
+              flexibleSpace: Padding(
+                padding: const EdgeInsets.only(left: 40.0, top: 5),
+                child: TextField(
+                    cursorColor: Colors.white38,
+                    decoration: new InputDecoration(
+                        border: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        errorBorder: InputBorder.none,
+                        disabledBorder: InputBorder.none,
+                        contentPadding: EdgeInsets.only(
+                            left: 15, bottom: 11, top: 11, right: 15),
+                        hintText: ("Enter the word to search for"),
+                        hintStyle: TextStyle(color: Colors.white38))),
+              ),
+              actions: [
+                IconButton(
+                  icon: Icon(
+                    Icons.close,
+                    color: Colors.white,
+                  ),
+                  onPressed: () {},
+                ),
               ],
             )
           : AppBar(
@@ -67,10 +81,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     onPressed: () {
                       setState(() {
-                        // if (isSearched == false) {
-                        //   isSearched = true;
-                        //   isTitleVisible = true;
-                        // } else if (isSearched == true) {}
+                        isAppBar = true;
                       });
                     })
               ],
