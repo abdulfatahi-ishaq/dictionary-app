@@ -11,10 +11,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool isEmpty = false;
+  final nameHolder = TextEditingController();
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
     bool isAppBar = true;
+    clear() {
+      nameHolder.clear();
+    }
+
     return Scaffold(
       // drawer: SideDrawer(),
       primary: true,
@@ -35,6 +40,7 @@ class _HomePageState extends State<HomePage> {
               flexibleSpace: Padding(
                 padding: const EdgeInsets.only(left: 40.0, top: 5),
                 child: TextField(
+                    controller: nameHolder,
                     onChanged: (value) {
                       setState(() {
                         // value == null ? isEmpty = true : isEmpty = false;
@@ -61,7 +67,11 @@ class _HomePageState extends State<HomePage> {
                       Icons.close,
                       color: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        clear();
+                      });
+                    },
                   ),
                 ),
               ],
