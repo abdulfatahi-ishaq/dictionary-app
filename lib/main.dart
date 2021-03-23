@@ -1,4 +1,5 @@
 import 'package:dictionary/modules/imports.dart';
+import 'package:dictionary/pages/help.dart';
 
 void main() => runApp(Dictionary());
 
@@ -15,7 +16,8 @@ class Dictionary extends StatelessWidget {
         NotePage.id: (context) => NotePage(),
         SettingsPage.id: (context) => SettingsPage(),
         BookmarkPage.id: (context) => BookmarkPage(),
-        WordPage.id: (context) => WordPage()
+        WordPage.id: (context) => WordPage(),
+        Help.id: (context) => Help()
       },
     );
   }

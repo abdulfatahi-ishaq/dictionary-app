@@ -52,7 +52,9 @@ class SideDrawer extends StatelessWidget {
                 ListTile(
                     leading: Icon(Icons.help),
                     title: Text('Help'),
-                    onTap: () {}),
+                    onTap: () {
+                      Navigator.pushNamed(context, Help.id);
+                    }),
                 ListTile(
                     leading: Icon(Icons.close),
                     title: Text('Exit'),

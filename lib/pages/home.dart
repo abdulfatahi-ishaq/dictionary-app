@@ -1,5 +1,4 @@
 import 'package:dictionary/modules/imports.dart';
-import 'package:dictionary/pages/word.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = "home_page";

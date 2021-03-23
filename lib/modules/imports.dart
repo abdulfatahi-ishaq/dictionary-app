@@ -8,3 +8,4 @@ export 'package:flutter/services.dart';
 export 'package:dictionary/components/side_drawer.dart';
 export 'package:dictionary/pages/home.dart';
 export 'package:dictionary/pages/word.dart';
+export 'package:dictionary/pages/help.dart';
