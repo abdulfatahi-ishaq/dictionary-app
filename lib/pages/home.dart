@@ -11,11 +11,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool isEmpty = false;
+  bool isAppBar = false;
   final nameHolder = TextEditingController();
   @override
   Widget build(BuildContext context) {
     GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
-    bool isAppBar = true;
     clear() {
       nameHolder.clear();
     }
