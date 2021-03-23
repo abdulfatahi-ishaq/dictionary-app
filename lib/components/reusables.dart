@@ -8,7 +8,7 @@ class HomeMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return TextButton(
       onPressed: onPressed,
       child: Row(
         children: <Widget>[
@@ -91,7 +91,7 @@ class SettingsList extends StatelessWidget {
   final bool isHeading;
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return TextButton(
       onPressed: onPressed,
       child: ListTile(
         // contentPadding: EdgeInsets.all(0),

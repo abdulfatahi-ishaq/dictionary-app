@@ -10,8 +10,8 @@ class _HelpState extends State<Help> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
       appBar: AppBar(
+        backgroundColor: Colors.red,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {},
@@ -27,6 +27,7 @@ class _HelpState extends State<Help> {
           )
         ],
       ),
+      body: ListView(),
     );
   }
 }
