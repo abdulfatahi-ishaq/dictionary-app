@@ -1,5 +1,4 @@
 import 'package:dictionary/modules/imports.dart';
-import 'package:dictionary/pages/help.dart';
 
 void main() => runApp(Dictionary());
 
@@ -18,6 +17,7 @@ class Dictionary extends StatelessWidget {
         BookmarkPage.id: (context) => BookmarkPage(),
         WordPage.id: (context) => WordPage(),
         Help.id: (context) => Help()
+        //Help Page Carousels
       },
     );
   }
